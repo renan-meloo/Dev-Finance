@@ -1,0 +1,194 @@
+/* Global ================ */
+:root {
+  --dark-blue: #363f5f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 93.75;
+}
+
+body {
+  background: #f0f2f5;
+  font-family: "Poppins", sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect (0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.container {
+  width: min(90vw, 800px);
+
+  margin: auto;
+}
+/* Titles =============== */
+h2 {
+  margin-top: 3.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--dark-blue);
+
+  font-weight: normal;
+}
+
+/* Links & Buttons =============== */
+
+a {
+  color: #49aa49;
+  text-decoration: none;
+
+}
+
+.button.new {
+  display: inline-block;
+  margin-bottom: .8rem;
+
+}
+
+a:hover {
+  color: #3dd705;
+}
+
+/* Header ======== */
+header {
+  background: #2d4a22;
+  padding: 2rem 0 10rem;
+  text-align: center;
+}
+
+#logo {
+  color: #fff;
+  font-weight: 100;
+}
+
+/* Balance =========== */
+
+#balance {
+  margin-top: -8rem;
+}
+
+#balance h2 {
+  color: white;
+  margin-top: 0;
+}
+
+/* Cards ============ */
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+
+  margin-bottom: 1.5rem;
+
+  color: var(--dark-blue);
+}
+
+.card h3 {
+  font-weight: normal;
+  font-size: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.card p {
+  font-size: 2rem;
+  line-height: 3rem; /*Separação entre os componentes da caixa*/
+  margin-top: 1rem;
+}
+
+.card.total {
+  background: #49aa26;
+  color: white;
+}
+
+/* Table ======*/
+#data-table {
+  display: block;
+  width: 100%;
+  border-spacing: 0 0.5rem;
+  color: #969cb3;
+
+  overflow-x: auto;
+}
+
+table thead tr:first-child,
+table tbody th:first-child {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr:last-child,
+table tbody th:last-child {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+table th {
+  background: white;
+
+  font-weight: normal;
+  padding: 1rem 2rem; /* cima e baixo / esquerda direita */
+
+  text-align: left;
+}
+
+table tbody tr {
+  opacity: 0.7;
+}
+
+table tbody tr:hover {
+  opacity: 1;
+}
+
+table tbody td {
+  background: white;
+
+  padding: 1rem 2rem;
+}
+
+td.description {
+  color: var(--dark-blue);
+}
+
+td.income {
+  color: #12a454;
+}
+
+td.expense {
+  color: #e92929;
+}
+
+/* Footer ======= */
+footer {
+  text-align: center;
+  padding: 4rem 0 2rem;
+  color: var(--dark-blue);
+  opacity: 0.6;
+}
+
+/* Responsive ======= */
+@media (min-width: 800px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  #balance {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 2rem;
+  }
+}
